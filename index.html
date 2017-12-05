@@ -1,0 +1,423 @@
+<html>
+	<head>
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			.ctrl{
+				position: absolute;
+				width: 91px;
+				height: 52px;
+				border-radius: 15px;
+				background-color: rgba(0,0,0,0);
+			}
+			.ctrl:hover{
+				background-color: rgba(0,0,0,0.1);
+			}
+		</style>
+	</head>
+	<body>
+		<audio id="sound1">
+			 <source src="music/drumset.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound2">
+			 <source src="music/ballet.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound3">
+			 <source src="music/bar.wav" type="audio/wav"/>
+		</audio>
+		<audio id="sound4">
+			 <source src="music/bass.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound5">
+			 <source src="music/car.wav" type="audio/wav"/>
+		</audio>
+		<audio id="sound6">
+			 <source src="music/flippages.wav" type="audio/wav"/>
+		</audio>
+		<audio id="sound7">
+			 <source src="music/guitar.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound8">
+			 <source src="music/Latindance.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound9">
+			 <source src="music/piano.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound10">
+			 <source src="music/restaurant.wav" type="audio/wav"/>
+		</audio>
+		<audio id="sound11">
+			 <source src="music/rock.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound12">
+			 <source src="music/saxophoneAndViolin.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound13">
+			 <source src="music/shoppingmall.wav" type="audio/wav"/>
+		</audio>
+		<audio id="sound14">
+			 <source src="music/sing.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound15">
+			 <source src="music/tuba.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound16">
+			 <source src="music/violin.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound17">
+			 <source src="music/violoncello.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound18">
+			 <source src="music/flute.mp3" type="audio/mpeg"/>
+		</audio>
+		<audio id="sound19">
+			 <source src="music/streetMusic.mp3" type="audio/mpeg"/>
+		</audio>
+		<button style="border:none; background: #888; color:#eee; border-radius:5px; width: 50px; height: 25px; line-height: 25px;" onclick="stopAll()">stop</button>
+		<img src="bg.png" style="position: absolute; top: 50px; left: 50px; width:1920px;" />
+		<!-- main grid background  -->
+		<img src="img/mainbg.png" style="position: absolute; top: 315px; left: 482px; width: 895px;" />
+
+		<!-- people icon -->
+		<img src="img/11.png" id="img11" style="position: absolute; top: 365px; left: 620px; width: 50px; opacity: 0;" />
+		<img src="img/12.png" id="img12" style="position: absolute; top: 363px; left: 697px; width: 80px; opacity: 0;" />
+		<img src="img/13.png" id="img13" style="position: absolute; top: 365px; left: 777px; width: 95px; opacity: 0;" />
+		<img src="img/14.png" id="img14" style="position: absolute; top: 363px; left: 900px; width: 45px; opacity: 0;" />
+		<img src="img/15.png" id="img15" style="position: absolute; top: 365px; left: 981px; width: 160px; opacity: 0;" />
+		<img src="img/16.png" id="img16" style="position: absolute; top: 365px; left: 1172px; width: 60px; opacity: 0;" />
+		<img src="img/17.png" id="img17" style="position: absolute; top: 363px; left: 1262px; width: 70px; opacity: 0;" />
+
+		<img src="img/21.png" id="img21" style="position: absolute; top: 418px; left: 620px; width: 90px; opacity: 0;" />
+		<img src="img/22.png" id="img22" style="position: absolute; top: 420px; left: 803px; width: 50px; opacity: 0;" />
+		<img src="img/23.png" id="img23" style="position: absolute; top: 418px; left: 983px; width: 65px; opacity: 0;" />
+		<img src="img/24.png" id="img24" style="position: absolute; top: 418px; left: 1090px; width: 45px; opacity: 0;" />
+		<img src="img/25.png" id="img25" style="position: absolute; top: 422px; left: 1165px; width: 85px; opacity: 0;" />
+		<img src="img/26.png" id="img26" style="position: absolute; top: 423px; left: 1269px; width: 45px; opacity: 0;" />
+
+		<img src="img/31.png" id="img31" style="position: absolute; top: 476px; left: 620px; width: 30px; opacity: 0;" />
+		<img src="img/32.png" id="img32" style="position: absolute; top: 480px; left: 720px; width: 30px; opacity: 0;" />
+		<img src="img/33.png" id="img33" style="position: absolute; top: 478px; left: 800px; width: 65px; opacity: 0;" />
+		<img src="img/34.png" id="img34" style="position: absolute; top: 476px; left: 910px; width: 30px; opacity: 0;" />
+		<img src="img/35.png" id="img35" style="position: absolute; top: 478px; left: 989px; width: 53px; opacity: 0;" />
+		<img src="img/36.png" id="img36" style="position: absolute; top: 475px; left: 1063px; width: 85px; opacity: 0;" />
+		<img src="img/37.png" id="img37" style="position: absolute; top: 473px; left: 1170px; width: 70px; opacity: 0;" />
+		<img src="img/38.png" id="img38" style="position: absolute; top: 483px; left: 1275px; width: 40px; opacity: 0;" />
+
+		<img src="img/41.png" id="img41" style="position: absolute; top: 533px; left: 618px; width: 45px; opacity: 0;" />
+		<img src="img/42.png" id="img42" style="position: absolute; top: 532px; left: 710px; width: 50px; opacity: 0;" />
+		<img src="img/43.png" id="img43" style="position: absolute; top: 536px; left: 894px; width: 50px; opacity: 0;" />
+		<img src="img/44.png" id="img44" style="position: absolute; top: 534px; left: 1081px; width: 60px; opacity: 0;" />
+		<img src="img/45.png" id="img45" style="position: absolute; top: 533px; left: 1170px; width: 60px; opacity: 0;" />
+		<img src="img/46.png" id="img46" style="position: absolute; top: 535px; left: 1269px; width: 65px; opacity: 0;" />
+
+		<img src="img/51.png" id="img51" style="position: absolute; top: 592px; left: 625px; width: 30px; opacity: 0;" />
+		<img src="img/52.png" id="img52" style="position: absolute; top: 594px; left: 722px; width: 40px; opacity: 0;" />
+		<img src="img/53.png" id="img53" style="position: absolute; top: 593px; left: 785px; width: 80px; opacity: 0;" />
+		<img src="img/54.png" id="img54" style="position: absolute; top: 591px; left: 895px; width: 55px; opacity: 0;" />
+		<img src="img/55.png" id="img55" style="position: absolute; top: 591px; left: 971px; width: 85px; opacity: 0;" />
+		<img src="img/56.png" id="img56" style="position: absolute; top: 592px; left: 1067px; width: 80px; opacity: 0;" />
+		<img src="img/57.png" id="img57" style="position: absolute; top: 593px; left: 1176px; width: 55px; opacity: 0;" />
+		<img src="img/58.png" id="img58" style="position: absolute; top: 589px; left: 1277px; width: 46px; opacity: 0;" />
+
+		<img src="img/61.png" id="img61" style="position: absolute; top: 648px; left: 715px; width: 35px; opacity: 0;" />
+		<img src="img/62.png" id="img62" style="position: absolute; top: 643px; left: 805px; width: 50px; opacity: 0;" />
+		<img src="img/63.png" id="img63" style="position: absolute; top: 657px; left: 985px; width: 60px; opacity: 0;" />
+		<img src="img/64.png" id="img64" style="position: absolute; top: 648px; left: 1089px; width: 42px; opacity: 0;" />
+		<img src="img/65.png" id="img65" style="position: absolute; top: 648px; left: 1184px; width: 155px; opacity: 0;" />
+
+		<img src="img/71.png" id="img71" style="position: absolute; top: 700px; left: 600px; width: 70px; opacity: 0;" />
+		<img src="img/72.png" id="img72" style="position: absolute; top: 701px; left: 699px; width: 60px; opacity: 0;" />
+		<img src="img/73.png" id="img73" style="position: absolute; top: 705px; left: 805px; width: 50px; opacity: 0;" />
+		<img src="img/74.png" id="img74" style="position: absolute; top: 704px; left: 890px; width: 60px; opacity: 0;" />
+		<img src="img/75.png" id="img75" style="position: absolute; top: 702px; left: 975px; width: 80px; opacity: 0;" />
+		<img src="img/76.png" id="img76" style="position: absolute; top: 703px; left: 1081px; width: 57px; opacity: 0;" />
+		<img src="img/77.png" id="img77" style="position: absolute; top: 705px; left: 1181px; width: 45px; opacity: 0;" />
+		<img src="img/78.png" id="img78" style="position: absolute; top: 704px; left: 1265px; width: 65px; opacity: 0;" />
+
+		<img src="img/81.png" id="img81" style="position: absolute; top: 761px; left: 698px; width: 68px; opacity: 0;" />
+		<img src="img/82.png" id="img82" style="position: absolute; top: 753px; left: 800px; width: 65px; opacity: 0;" />
+		<img src="img/83.png" id="img83" style="position: absolute; top: 754px; left: 900px; width: 50px; opacity: 0;" />
+		<img src="img/84.png" id="img84" style="position: absolute; top: 756px; left: 1089px; width: 40px; opacity: 0;" />
+		<img src="img/85.png" id="img85" style="position: absolute; top: 756px; left: 1173px; width: 65px; opacity: 0;" />
+		<img src="img/86.png" id="img86" style="position: absolute; top: 758px; left: 1270px; width: 60px; opacity: 0;" />
+
+		<img src="img/91.png" id="img91" style="position: absolute; top: 813px; left: 613px; width: 40px; opacity: 0;" />
+		<img src="img/92.png" id="img92" style="position: absolute; top: 811px; left: 691px; width: 77px; opacity: 0;" />
+		<img src="img/93.png" id="img93" style="position: absolute; top: 815px; left: 800px; width: 47px; opacity: 0;" />
+		<img src="img/94.png" id="img94" style="position: absolute; top: 814px; left: 876px; width: 55px; opacity: 0;" />
+		<img src="img/95.png" id="img95" style="position: absolute; top: 815px; left: 983px; width: 60px; opacity: 0;" />
+		<img src="img/96.png" id="img96" style="position: absolute; top: 813px; left: 1081px; width: 50px; opacity: 0;" />
+		<img src="img/97.png" id="img97" style="position: absolute; top: 810px; left: 1171px; width: 55px; opacity: 0;" />
+		<img src="img/98.png" id="img98" style="position: absolute; top: 814px; left: 1253px; width: 75px; opacity: 0;" />
+
+		<img src="img/101.png" id="img101" style="position: absolute; top: 865px; left: 600px; width: 75px; opacity: 0;" />
+		<img src="img/102.png" id="img102" style="position: absolute; top: 869px; left: 714px; width: 40px; opacity: 0;" />
+		<img src="img/103.png" id="img103" style="position: absolute; top: 864px; left: 894px; width: 55px; opacity: 0;" />
+		<img src="img/104.png" id="img104" style="position: absolute; top: 863px; left: 966px; width: 100px; opacity: 0;" />
+		<img src="img/105.png" id="img105" style="position: absolute; top: 867px; left: 1178px; width: 55px; opacity: 0;" />
+		<img src="img/106.png" id="img106" style="position: absolute; top: 874px; left: 1278px; width: 40px; opacity: 0;" />
+
+		<img src="img/111.png" id="img111" style="position: absolute; top: 925px; left: 675px; width: 73px; opacity: 0;" />
+		<img src="img/112.png" id="img112" style="position: absolute; top: 919px; left: 780px; width: 90px; opacity: 0;" />
+		<img src="img/113.png" id="img113" style="position: absolute; top: 920px; left: 890px; width: 65px; opacity: 0;" />
+		<img src="img/114.png" id="img114" style="position: absolute; top: 925px; left: 989px; width: 48px; opacity: 0;" />
+		<img src="img/115.png" id="img115" style="position: absolute; top: 923px; left: 1081px; width: 70px; opacity: 0;" />
+		<img src="img/116.png" id="img116" style="position: absolute; top: 926px; left: 1184px; width: 40px; opacity: 0;" />
+		<img src="img/117.png" id="img117" style="position: absolute; top: 930px; left: 1255px; width: 70px; opacity: 0;" />
+
+		<!-- arrows -->
+		<div id="frame1" style="background: rgba(0,0,0,0); width: 170px; height: 280px; position: absolute; top: 244px; left: 922px; border-top:1px solid #aaa; border-left:1px solid #aaa;  opacity: 0;"></div>
+		<div id="frame2" style="background: rgba(0,0,0,0); width: 260px; height: 10px; position: absolute; top: 453px; left: 1128px; border-top:1px solid #aaa;  opacity: 0;"></div>
+		<div id="frame3" style="background: rgba(0,0,0,0); width: 615px; height: 10px; position: absolute; top: 646px; left: 848px; border-top:1px solid #aaa; opacity: 0;"></div>
+		<div id="frame4" style="background: rgba(0,0,0,0); width: 290px; height: 60px; position: absolute; top: 675px; left: 1135px; border-top:1px solid #aaa; border-right:1px solid #aaa; opacity: 0;"></div>
+		<div id="frame5" style="background: rgba(0,0,0,0); width: 10px; height: 60px; position: absolute; top: 860px; left: 1415px;border-right:1px solid #aaa; opacity: 0;"></div>
+		<div id="frame6" style="background: rgba(0,0,0,0); width: 10px; height: 60px; position: absolute; top: 1010px; left: 1415px;border-right:1px solid #aaa; opacity: 0;"></div>
+		<div id="frame7" style="background: rgba(0,0,0,0); width: 45px; height: 10px; position: absolute; top: 1080px; left: 1270px;border-bottom:1px solid #aaa; opacity: 0;"></div>
+		<div id="frame8" style="background: rgba(0,0,0,0); width: 50px; height: 160px; position: absolute; top: 910px; left: 1025px; border-bottom:1px solid #aaa; border-left:1px solid #aaa; opacity: 0;"></div>
+		<div id="frame9" style="background: rgba(0,0,0,0); width: 10px; height: 50px; position: absolute; top: 970px; left: 920px; border-left:1px solid #aaa; opacity: 0;"></div>
+
+		<!-- pictures -->
+		<img id="bg1" src="img/bg1.png" style="position:absolute; left: 585px; top: 70px; width: 140px; opacity: 0;" />
+		<img id="bg2" src="img/bg2.png" style="position:absolute; left: 770px; top: 60px; width: 120px; opacity: 0;" />
+		<img id="bg3" src="img/bg3.png" style="position:absolute; left: 1100px; top: 185px; width: 160px; opacity: 0;" />
+		<img id="bg4" src="img/bg4.png" style="position:absolute; left: 1425px; top: 235px; width: 170px; opacity: 0;" />
+		<img id="bg5" src="img/bg5.png" style="position:absolute; left: 1395px; top: 415px; width: 170px; opacity: 0;" />
+		<img id="bg6" src="img/bg6.png" style="position:absolute; left: 1470px; top: 590px; width: 170px; opacity: 0;" />
+		<img id="bg7" src="img/bg7.png" style="position:absolute; left: 1380px; top: 732px; width: 120px; opacity: 0;" />
+		<img id="bg8" src="img/bg8.png" style="position:absolute; left: 1540px; top: 755px; width: 135px; opacity: 0;" />
+		<img id="bg9" src="img/bg9.png" style="position:absolute; left: 1400px; top: 920px; width: 160px; opacity: 0;" />
+		<img id="bg10" src="img/bg10.png" style="position:absolute; left: 1315px; top: 1070px; width: 170px; opacity: 0;" />
+		<img id="bg11" src="img/bg11.png" style="position:absolute; left: 1075px; top: 1000px; width: 200px; opacity: 0;" />
+		<img id="bg12" src="img/bg12.png" style="position:absolute; left: 780px; top: 1020px; width: 240px; opacity: 0;" />
+		<img id="bg13" src="img/bg13.png" style="position:absolute; left: 550px; top: 1036px; width: 120px; opacity: 0;" />
+		<img id="bg14" src="img/bg14.png" style="position:absolute; left: 340px; top: 982px; width: 160px; opacity: 0;" />
+		<img id="bg15" src="img/bg15.png" style="position:absolute; left: 50px; top: 800px; width: 445px; opacity: 0;" />
+		<img id="bg16" src="img/bg16.png" style="position:absolute; left: 90px; top: 575px; width: 400px; opacity: 0;" />
+		<img id="bg17" src="img/bg17.png" style="position:absolute; left: 200px; top: 465px; width: 280px; opacity: 0;" />
+		<img id="bg18" src="img/bg18.png" style="position:absolute; left: 185px; top: 350px; width: 300px; opacity: 0;" />
+		
+
+		<script type="text/javascript">
+			function func1(){
+				$("#img11").animate({opacity:1},500);
+				$("#img12").animate({opacity:1},500);
+				$("#img13").animate({opacity:1},500);
+				$("#img31").animate({opacity:1},500);
+				$("#img32").animate({opacity:1},500);
+				$("#img35").animate({opacity:1},500);
+				$("#img36").animate({opacity:1},500);
+				$("#img91").animate({opacity:1},500);
+			}
+
+			function func2(){
+				$("#bg1").animate({opacity:1}, 300);
+				$("#bg2").animate({opacity:1}, 300);
+				$("#bg17").animate({opacity:1}, 300);
+				$("#bg18").animate({opacity:1}, 300);
+				$("#bg15").animate({opacity:1}, 300);
+				aud_play_pause('sound7');
+			}
+
+			function func3(){
+				aud_play_pause('sound7');
+				$("#img15").animate({opacity:1},500);
+				$("#img33").animate({opacity:1},500);
+				$("#img51").animate({opacity:1},500);
+				$("#img52").animate({opacity:1},500);
+				$("#img53").animate({opacity:1},500);
+				$("#img54").animate({opacity:1},500);
+				$("#img55").animate({opacity:1},500);
+				$("#img57").animate({opacity:1},500);
+			}
+			function func4(){
+				$("#bg16").animate({opacity:1}, 300);
+				aud_play_pause('sound16');
+			}
+			function func5(){
+				aud_play_pause('sound16');
+				$("#img17").animate({opacity:1},500);
+				$("#img71").animate({opacity:1},500);
+				$("#img72").animate({opacity:1},500);
+				$("#img73").animate({opacity:1},500);
+				$("#img75").animate({opacity:1},500);
+				$("#img76").animate({opacity:1},500);
+				$("#img78").animate({opacity:1},500);
+				$("#img92").animate({opacity:1},500);
+				$("#img93").animate({opacity:1},500);
+				$("#img95").animate({opacity:1},500);
+				$("#img96").animate({opacity:1},500);
+				$("#img98").animate({opacity:1},500);
+			}
+			function func6(){
+				
+				aud_play_pause('sound12');
+			}
+			function func7(){
+				aud_play_pause('sound12');
+				$("#img14").animate({opacity:1},500);
+				$("#img16").animate({opacity:1},500);
+				$("#img34").animate({opacity:1},500);
+				$("#img37").animate({opacity:1},500);
+				$("#img38").animate({opacity:1},500);
+				$("#img54").animate({opacity:1},500);
+				$("#img57").animate({opacity:1},500);
+				$("#img74").animate({opacity:1},500);
+				$("#img77").animate({opacity:1},500);
+				$("#img94").animate({opacity:1},500);
+				$("#img97").animate({opacity:1},500);
+				$("#img111").animate({opacity:1},500);
+				$("#img112").animate({opacity:1},500);
+				$("#img113").animate({opacity:1},500);
+				$("#img114").animate({opacity:1},500);
+				$("#img115").animate({opacity:1},500);
+				$("#img116").animate({opacity:1},500);
+				$("#img117").animate({opacity:1},500);
+			}
+			function func8(){
+				$("#bg12").animate({opacity:1}, 300);
+				$("#frame9").animate({opacity:1}, 300);
+				aud_play_pause('sound6');
+			}
+
+			function func9(){
+				aud_play_pause('sound6');
+				$("#img22").animate({opacity:1},500);
+				$("#img26").animate({opacity:1},500);
+				$("#img43").animate({opacity:1},500);
+				$("#img65").animate({opacity:1},500);
+				$("#img85").animate({opacity:1},500);
+				$("#img102").animate({opacity:1},500);
+				$("#img103").animate({opacity:1},500);
+				$("#img104").animate({opacity:1},500);
+			}
+			function func10(){
+				$("#bg3").animate({opacity:1}, 300);
+				$("#bg4").animate({opacity:1}, 300);
+				$("#bg14").animate({opacity:1}, 300);
+				$("#bg13").animate({opacity:1}, 300);
+				$("#frame1").animate({opacity:1}, 300);
+				aud_play_pause('sound11');
+			}
+			function func11(){
+				aud_play_pause('sound11');
+				$("#img21").animate({opacity:1},500);
+				$("#img25").animate({opacity:1},500);
+				$("#img44").animate({opacity:1},500);
+				$("#img45").animate({opacity:1},500);
+				$("#img46").animate({opacity:1},500);
+				$("#img62").animate({opacity:1},500);
+				$("#img63").animate({opacity:1},500);
+				$("#img64").animate({opacity:1},500);
+				$("#img81").animate({opacity:1},500);
+				$("#img82").animate({opacity:1},500);
+				$("#img101").animate({opacity:1},500);
+			}
+			function func12(){
+				aud_play_pause('sound2');
+				$("#bg6").animate({opacity:1}, 300);
+				$("#frame3").animate({opacity:1}, 300);
+			}
+			function func13(){
+				aud_play_pause('sound2');
+				$("#img23").animate({opacity:1},500);
+				$("#img24").animate({opacity:1},500);
+				$("#img41").animate({opacity:1},500);
+				$("#img42").animate({opacity:1},500);
+				$("#img61").animate({opacity:1},500);
+				$("#img83").animate({opacity:1},500);
+				$("#img84").animate({opacity:1},500);
+				$("#img86").animate({opacity:1},500);
+				$("#img105").animate({opacity:1},500);
+				$("#img106").animate({opacity:1},500);
+			}
+			function func14(){
+				$("#frame2").animate({opacity:1}, 300);
+				$("#frame4").animate({opacity:1}, 300);
+				$("#frame5").animate({opacity:1}, 300);
+				$("#frame6").animate({opacity:1}, 300);
+				$("#frame7").animate({opacity:1}, 300);
+				$("#frame8").animate({opacity:1}, 300);
+				$("#bg5").animate({opacity:1}, 300);
+				$("#bg7").animate({opacity:1}, 300);
+				$("#bg8").animate({opacity:1}, 300);
+				$("#bg9").animate({opacity:1}, 300);
+				$("#bg10").animate({opacity:1}, 300);
+				$("#bg11").animate({opacity:1}, 300);
+				aud_play_pause('sound19');
+				aud_play_pause('sound13');
+			}
+			function func15(){
+				aud_play_pause('sound19');
+				aud_play_pause('sound13');
+			}
+
+			setTimeout(func1, 1000);
+			setTimeout(func2, 1500);
+
+			setTimeout(func3, 18500);
+			setTimeout(func4, 19000);
+
+			setTimeout(func5, 36000);
+			setTimeout(func6, 36500);
+
+			setTimeout(func7, 53500);
+			setTimeout(func8, 54000);
+
+
+			setTimeout(func9, 71000);
+			setTimeout(func10, 71500);
+
+			setTimeout(func11, 88500);
+			setTimeout(func12, 89000);
+
+			setTimeout(func13, 106000);
+			setTimeout(func14, 106500);
+			setTimeout(func15, 113500);
+		</script>
+
+		<div style="top: 357px; left: 594px; width:277px;" class="ctrl" onclick="aud_play_pause('sound7')"></div>
+		<div style="top: 357px; left: 875px;" class="ctrl" onclick="aud_play_pause('sound10')"></div>
+		<div style="top: 357px; left: 972px; width:180px;" class="ctrl" onclick="aud_play_pause('sound16')"></div>
+		<div style="top: 357px; left: 1158px;" class="ctrl" onclick="aud_play_pause('sound10')"></div>
+		<div style="top: 357px; left: 1253px;" class="ctrl" onclick="aud_play_pause('sound17')"></div>
+		<div style="top: 469px; left: 594px; width: 180px;" class="ctrl" onclick="aud_play_pause('sound14')"></div>
+		<div style="top: 469px; left: 782px; width: 115px;" class="ctrl" onclick="aud_play_pause('sound18')"></div>
+		<div style="top: 469px; left: 1060px;" class="ctrl" onclick="aud_play_pause('sound9')"></div>
+		<div style="top: 469px; left: 1157px;" class="ctrl" onclick="aud_play_pause('sound10')"></div>
+		<div style="top: 583px; left: 594px; width:273px;" class="ctrl" onclick="aud_play_pause('sound2')"></div>
+		<div style="top: 583px; left: 875px;" class="ctrl" onclick="aud_play_pause('sound10')"></div>
+		<div style="top: 583px; left: 971px; width:180px;" class="ctrl" onclick="aud_play_pause('sound2')"></div>
+		<div style="top: 583px; left: 1158px;" class="ctrl" onclick="aud_play_pause('sound10')"></div>
+		<div style="top: 583px; left: 1253px;" class="ctrl" onclick="aud_play_pause('sound8')"></div>
+		<div style="top: 693px; left: 689px;" class="ctrl" onclick="aud_play_pause('sound4')"></div>
+		<div style="top: 693px; left: 780px; width:86px;" class="ctrl" onclick="aud_play_pause('sound12')"></div>
+		<div style="top: 693px; left: 875px;" class="ctrl" onclick="aud_play_pause('sound6')"></div>
+		<div style="top: 693px; left: 973px;" class="ctrl" onclick="aud_play_pause('sound1')"></div>
+		<div style="top: 805px; left: 594px; width:88px;" class="ctrl" onclick="aud_play_pause('sound16')"></div>
+		<div style="top: 805px; left: 689px;" class="ctrl" onclick="aud_play_pause('sound15')"></div>
+		<div style="top: 805px; left: 780px; width:89px;" class="ctrl" onclick="aud_play_pause('sound16')"></div>
+		<div style="top: 805px; left: 935px; width:125px;" class="ctrl" onclick="aud_play_pause('sound9')"></div>
+		<div style="top: 805px; left: 1064px;" class="ctrl" onclick="aud_play_pause('sound16')"></div>
+		<div style="top: 805px; left: 1216px; width:128px;" class="ctrl" onclick="aud_play_pause('sound11')"></div>
+		<div style="top: 917px; left: 875px;" class="ctrl" onclick="aud_play_pause('sound10')"></div>
+		<div style="top: 638px; left: 1158px; width:185px;" class="ctrl" onclick="aud_play_pause('sound11')"></div>
+		<div style="top: 414px; left: 594px; width:180px;" class="ctrl" onclick="aud_play_pause('sound5')"></div>
+		<div style="top: 526px; left: 594px; width:180px;" class="ctrl" onclick="aud_play_pause('sound5')"></div>
+		<div style="top: 638px; left: 689px;" class="ctrl" onclick="aud_play_pause('sound5')"></div>
+		<div style="top: 750px; left: 689px;" class="ctrl" onclick="aud_play_pause('sound5')"></div>
+		<div style="top: 862px; left: 594px; width:180px;" class="ctrl" onclick="aud_play_pause('sound5')"></div>
+		<div style="top: 750px; left: 782px; width:90px;" class="ctrl" onclick="aud_play_pause('sound13')"></div>
+		<div style="top: 862px; left: 973px; width:90px;" class="ctrl" onclick="aud_play_pause('sound11')"></div>
+		<div style="top: 414px; left: 1158px; width:90px;" class="ctrl" onclick="aud_play_pause('sound10')"></div>
+
+		<script type="text/javascript">
+			function aud_play_pause(soundId) {
+				var myAudio = document.getElementById(soundId);
+				if (myAudio.paused) {
+					myAudio.play();
+				} else {
+					myAudio.pause();
+				}
+			}
+		</script>
+	</body>
+</html>
